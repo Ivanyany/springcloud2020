@@ -12,6 +12,7 @@
     <module>cloud-consumer-oder80</module>
     <module>cloud-api-common</module>
       <module>cloud-eureka-server7001</module>
+      <module>cloud-eureka-server7002</module>
   </modules>
   <!--父工程-->
   <packaging>pom</packaging>
