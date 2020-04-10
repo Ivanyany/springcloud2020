@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 @Service
 public class PaymentServiceImpl implements PaymentService {
 
-//    @Autowired
+    //@Autowired
     @Resource//与@Autowired等价
     PaymentDao paymentDao;
 

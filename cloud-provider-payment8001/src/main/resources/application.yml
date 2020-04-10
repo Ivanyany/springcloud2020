@@ -18,8 +18,13 @@ eureka:
     register-with-eureka: true   #是否将自己注册到注册中心,集群必须设置为true配合ribbon
     fetch-registry: true    #是否从服务端抓取已有的注册信息
     service-url:
-#      defaultZone: http://localhost:7001/eureka # 单机版
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka # 集群版
+      defaultZone: http://localhost:7001/eureka # 单机版
+#      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka # 集群版
+  instance:
+    instance-id: payment8001 #对外显示的名称,隐藏主机名
+    prefer-ip-address: true #显示ip,方便查看
+#    lease-renewal-interval-in-seconds: 1 #客户端向服务端发送的心跳包时间,默认30秒
+#    lease-expiration-duration-in-seconds: 2 #服务端收到最后一次心跳包等待上限,默认90秒,超时剔除服务
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
