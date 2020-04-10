@@ -1,0 +1,17 @@
+#配置端口
+server:
+  port: 80
+
+#配置服务名称
+spring:
+  application:
+    name: consul-consumer-payment
+
+#配置consul相关信息(注册中心地址)
+cloud:
+  consul:
+    host: localhost
+    port: 8500
+    discovery:
+      #hostname: 127.0.0.1
+      service-name: ${spring.application.name}
