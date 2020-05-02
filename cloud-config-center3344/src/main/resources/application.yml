@@ -12,10 +12,25 @@ spring:
           uri: git@github.com:Ivanyany/springcloud-config.git     #github上面仓库的名字
           search-paths:
             - springcloud-config   #搜索目录
-      label: master     #读取分支
+      label: master   #读取分支
+  #rabbitmq的支持
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 #注册到eureka服务列表中
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka # 单机版
+      defaultZone: http://localhost:7001/eureka  # 单机版
+
+
+
+#rabbitmq相关的配置 暴露bus刷新配置的端点
+management:
+  endpoints:    #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: "bus-refresh"
